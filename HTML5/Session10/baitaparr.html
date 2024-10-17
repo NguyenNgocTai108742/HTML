@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* viết ct nhập vào một mảng số nguyên có n phần tử
+        1.in các phần tử trong mảng ra màn hình 
+        2. in các số nguyên tố trong mảng ra mh
+        3. tính toỏng các phần tử
+        */ 
+        var n =parseInt(prompt('nhập vào mảng các phần tử '))
+        var a = new Array(n)
+    
+        for (i = 0; i < n; i++){
+            a[i]=parseInt(prompt('a['+(i+1)+']'))
+        }
+        for (item of a)
+            document.write(item + '\t')
+            document.write('<br>')
+
+        
+        for (c of a){
+            kt=1
+            if (c==1||c==0)
+
+            kt=0
+            else 
+                for(m=2;m<=parseInt(c/2);m++){
+                    if (c % m==0){
+                        kt=0
+
+                    }
+                }
+            if(kt==1)
+            document.write('các số nguyên tố trong mảng'+c+'\t')
+        }
+        document.write('<br>')
+        s=0
+        for(b=0;b<a.length;b++)
+            s=s+a[b]
+        document.write('tổng các phần tử '+s)
+       
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

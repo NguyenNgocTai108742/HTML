@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var n = parseInt(prompt('nhập số phần tử trong mảng'))
+        var a = new Array(n)
+        s = 0
+        function arr() {
+            for (i = 0; i < a.length; i++)
+                a[i] = parseInt(prompt('a[' + (i + 1) + ']'))
+            for (i in a) {
+                document.write(a[i] + '\t')
+            }
+            document.write('<br>')
+            for (e in a){
+                s=s+a[e]
+                document.write('tổng các phần tử trong mảng'+s)
+            }
+        }
+        arr()
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .img-container{
+            position: relative;
+            display: inline-block;
+        }
+        .over-img{
+            position: absolute;
+            top:0px;
+            left: 200px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .img-container:hover .over-img{
+            opacity: 1;
+        }
+    </style>
+    <div>
+        <img src="123.jpg" width="150px" height="250px">
+    </div>
+    <div class="img-container">
+        <img src="345.jpg" width="150px" height="250px">
+        <img class="over-img" src="345.jpg" width="150px" height="250px">
+    </div>
+</body>
+
+</html>

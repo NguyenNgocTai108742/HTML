@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        viêt ct nhập vào một số nguyên n từ bàn phím . in dảo ngược n
+        */
+        var n = parseInt(prompt('nhập n'))
+        function rev(n) {
+            var revs = 0
+            while (n != 0) {
+                res = n % 10
+                revs = revs * 10 + res
+                n = parseInt(n / 10)
+            }
+            return revs
+        }
+        kp = rev(n)
+        alert(rev(n))
+        //viết hàm kiểm tra chẳn lẽ của một số ngyên  n>0
+        var n = parseInt(prompt('nhập số n'))
+        function chan_le(n) {
+            if (n % 2 == 0)
+                return true
+            else
+                return false
+        }
+            if (chan_le(n))
+                alert(n + ' là số chẳn ')
+            else
+                alert(n + ' là số lẻ ')
+        chan_le(n)
+    </script>
+</body>
+
+</html>

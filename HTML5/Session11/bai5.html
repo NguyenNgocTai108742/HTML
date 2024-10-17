@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Name:</label>
+    <input type="text" id="idname"><br>
+    <label>phone:</label>
+    <input type="text" id="idphone">
+    <p>
+        <button id="btbAdd" onclick="add()">Add</button>
+        <button id="btbRead" onclick="readname()">Read</button>
+    </p>
+    <script>
+        //tạo database DBdemo
+        var request = indexedDB.open("DBdemo")
+        var objData = null
+        var db = null
+        //tạo đối tượng objdata có 3 thuột tính
+        //id , name , phone
+        request.onupgradeneeded = function () {
+            db = request.result
+            objData = db.createObjectStore("objEmpl", { keyPath: 'Id', autoIncrement: true })
+            var nameIndex = objData.createIndex('nameEmpl', 'nameEmpl')
+            var phoneIndex = objData.createIndex('phoneEmpl', 'phoneEmpl')
+            /*objData.put({ nameEmpl: 'nguyên văn a', phoneEmpl: '057907471' })
+            objData.put({ nameEmpl: 'nguyên văn B', phoneEmpl: '057907471' })
+           // objData.put({ nameEmpl: document.getElementById('idname').innerHTML, phoneEmpl: document.getElementById('idphone').innerHTML })
+            objData=TransformStream('idname')*/
+        }
+        function add() {
+            var name = document.getElementById('idname').value;
+            var phone = document.getElementById('idphone').value;
+            var request = db.transaction(['objEmpl'], 'readwrite')
+                .objectStore('objEmpl')
+                .put({ nameEmpl: name, phoneEmpl: phone })
+            request.onsuccess = function (event) {
+                alert('thêm dữ liệu thành công')
+            }
+            request.onerror = function (event) {
+                alert('thêm dữ liệu thất bại')
+            }
+        }
+        //thêm nhiều người
+        function readname() {
+            var objectStore = db.transaction("objEmpl").objectStore("objEmpl");
+            objectStore.openCursor().onsuccess = function (event) {
+                var cursor = event.target.result;
+                if (cursor) {
+                    alert('Mã: ' +cursor.key+ 'số điện thoại: ' + cursor.phoneEmpl + 'tên nhân viên:' + cursor.value.nameEmpl)
+                    cursor.continue();
+                }
+                else {
+                    alert('không thành công')
+                }
+            }
+        }
+        
+    </script>
+</body>
+
+</html>

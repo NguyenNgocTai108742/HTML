@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    background-color: aqua;
+    padding: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.item2 {
+    display: flex;
+    order: 3;
+    flex-grow: 3;
+    flex-basis: 50px;
+    justify-content: center;
+}
+.container div{
+    background-color: blueviolet;
+    margin: 5px;
+    padding: 5px;
+    color: aliceblue;
+}

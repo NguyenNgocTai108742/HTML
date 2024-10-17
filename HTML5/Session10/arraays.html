@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //cách 1
+        var arr = new Array(3)
+        arr[0] = 56
+        arr[1] = 5
+        arr[2] = 45
+        //cách 2
+        var arr2 = [5, 'abc', 6, 45];
+        //(arr2[1])
+        //in các phần tử
+        for (i = 0; i < arr2.length; i++)
+            document.write(arr2[i] + '\t')
+        document.write('<br>')
+        for (i in arr2)
+            document.write(arr2[i] + '\t')
+        document.write('<br>')
+        for (item of arr2)
+            document.write(item + '\t')
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label>username:</label>
+        <input type="text" id="txtUser"><br>
+        <label>password</label>
+        <input tyle="password" id="txtPass"><br>
+        <p>
+            <button id="btnlogin" onclick="login()">login</button>
+        </p>
+    </form>
+    <p id="mss">
+        <script>
+            document.getElementById('mss').style.color = 'blue'
+            function login() {
+                var user = document.getElementById('txtUser').value
+                var pass = document.getElementById('txtPass').value
+                if (user == 'admin' && pass == "12345") {
+                    sessionStorage.setItem('usr', user)
+                    document.getElementById('mss').innerHTML = sessionStorage.getItem('usr')
+                    alert('đăng nhập thành công')
+                }
+                else
+                    document.getElementById('mss').innerHTML = 'đăng nhập thành công'
+                //alert('đăng nhập ko thành công')
+            }
+            document.getElementById('mss').innerHTML = sessionStorage.getItem('usr')
+        </script>
+    </p>
+
+</body>
+
+</html>

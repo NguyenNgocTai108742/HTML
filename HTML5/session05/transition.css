@@ -1,0 +1,30 @@
+.box1{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    transition-property: background-color;
+    transition-duration: 2s;
+    /*transition-delay: 3s;
+    transition-timing-function: cubic-bezier();*/
+}
+.box1:hover{
+    background-color: rgb(208, 18, 53);
+    width: 250px;
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    animation-name: animationColor;
+    animation-duration: 2s;
+    /*animation-delay: 2s;*/
+    animation-timing-function: linear;
+    animation-iteration-count: 4;
+}
+@keyframes animationColor {
+    to{
+        background-color: aquamarine;
+        position: absolute;
+        bottom: 300px;
+    }
+}

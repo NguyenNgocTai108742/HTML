@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //lệnh break: cho một số 
+        /*for (i = 1; i <= 100; i++) {
+            document.write(i + '\t')
+            if (i == 50) break
+        }*/
+        // lệnh continue
+        /*for(i=1;1<=100;i++){
+            if(i%2==0) continue
+            document.write(i+'\t')
+        }*/
+        /*viết ct nhập vào 1 số nguyên n>0 kiểm tra số n vừa
+        nhập có phải là số nguyên tố hay ko */
+        var n = parseInt(prompt('nhập số n: '))
+        a = 1
+        if (n == 1)
+            a = 0
+        else {
+            for (i = 2; i <= parseInt(n / 2); i++) {
+                if (n % i == 0) {
+                    a = 0;
+                    break;
+                }
+            }
+        }
+        if (a == 1)
+            alert(n + ' là số nguyen tố')
+        else
+            alert(n + ' ko phải số nguyên tố')
+
+    </script>
+</body>
+
+</html>

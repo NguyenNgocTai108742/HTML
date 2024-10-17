@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+nav ul li{
+    display: inline-block;
+    padding-left: 10px;
+}
+.container{
+    display: flex;
+    background-color: black;
+    color: aliceblue;
+    height: 30px;
+    justify-content: start;
+    align-items: center;
+}
+.icon{
+    display: none;
+}
+@media screen and (max-width:480px){
+    nav ul li{
+        display: none;
+    }
+    .icon{
+        display: block;
+    }
+}
+    

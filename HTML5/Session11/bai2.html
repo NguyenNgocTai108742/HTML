@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //C1:dùng đối tựơng Object()
+        var objsv = new Object();
+        objsv.id = '001',
+            objsv.name = 'nguyên văn A'
+        //phương thức thay đổi
+        objsv.changeName = function () {
+            objsv.nameStud = 'trần văn b'
+        }
+        //truy suất các thuột tính để lấy giá trị
+        /*cú pháp
+        <tên đối tượng >.<thuọt tính>
+        */
+        //in sv ra mang hing chưa thay đổi
+        //alert(objsv.id + " " + objsv.name)
+        //gọi thực thi pt thay đổi
+        objsv.changeName();
+        //alert(objsv.id + " " + objsv.name)
+        //C2: tự định nghia 
+        var idCust, nameCust, phone
+        function objCustomer(id, name, phoneNum) {
+            this.idCust = id
+            this.nameCust = name
+            this.phone = phoneNum
+        }
+        //khởi tạo đối tượng 
+        var objCust = new objCustomer('0011', 'nguyễn văn A', '0541646486')
+        //alert(objCust.nameCust)
+        //alert
+        var objHV = {
+            ibhv: '001', 
+            namehv: 'nguyên văn a'
+        }
+        //alert(objHV.ibhv)
+        /*
+        khởi tạo một đối tượng hcn có chiều dài và
+         rộng nhập tự bàn phím
+        */
+        /*var hcn= new Object();
+        hcn.cd= parseInt(prompt('nhập chiều dài hcn')),
+        hcn.cr= parseInt(prompt('nhập chiều rộng hcn'))
+        hcn.dientich=function(){
+         return hcn.dt=hcn.cd*hcn.cr
+        }*/
+        //alert('KQ:'+hcn.dientich());
+        /*
+        khởi tạo một đối tượng là hs có các thuột tính sau:
+        tên hs, điểm toán , điểm lý , điểm tin
+        -tính điểm tb
+        -xếp loại
+        */
+        var hs = new Object();
+        hs.ten = 'nguyễn văn a',
+            hs.toan = 5,
+            hs.ly = 8,
+            hs.tin = 2
+        hs.diemtrungbinh = function () {
+            return hs.dtb = (hs.toan + hs.ly + hs.tin) / 3
+        }
+        document.write('diểm trung bình ' + hs.diemtrungbinh())
+        document.write('<br>')
+        hs.xeploai = function () {
+            if (hs.dtb >= 8)
+                document.write('học sinh giỏi')
+            else if (hs.dtb < 8 && hs.dtb >= 6.5)
+                document.write('học sinh khá')
+            else
+                document.write('học sinh TB')
+        }
+        hs.xeploai()
+
+
+    </script>
+</body>
+
+</html>

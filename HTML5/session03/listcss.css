@@ -1,0 +1,20 @@
+ /* bộ chọn tổng quát*/
+*{
+    font-family: 'Times New Roman', Times, serif;
+    color: aqua;
+}
+/* bộ chọn ID*/
+#format{
+    color: darkgoldenrod;
+}
+/*bộ chọn class*/
+.formatColor{
+    color: blueviolet;
+}
+/*dùng thẻ html lm bộ chọn*/
+h1{
+    color:aqua
+}
+h2{
+    color: blue;
+}

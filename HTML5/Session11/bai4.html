@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        canvas {
+            border: 1px solid blueviolet;
+            border-radius: 10px;
+        }
+    </style>
+    <canvas id="mycar" height="400px" width="500px">
+    </canvas>
+    <script>
+        var mycar = document.getElementById('mycar')
+        var ctxt = mycar.getContext('2d')
+        /*ctxt.fillStyle = 'red'
+        ctxt.fillRect(100, 150, 70, 90)
+        ctxt.fillStyle = 'blue'
+        ctxt.fillText('xin chào', 100, 160)*/
+        ctxt.beginPath();
+        ctxt.arc(110, 100, 70, 0, 2 * Math.PI)
+        ctxt.stroke();
+    </script>
+</body>
+
+</html>

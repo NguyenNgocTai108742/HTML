@@ -1,0 +1,24 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.menu ul li{
+    display: inline-block;
+    position: relative;
+    /*transition-duration: 2s;*/
+}
+ul li::after{
+    width:0px;
+    height: 2px;
+    position: absolute;
+    content:'';
+    bottom: 0px;
+    left: 0px;
+    background-color: rgb(221, 27, 27);
+    transition-property: background-color,width;
+    transition-duration: 2s;
+}
+ul li:hover::after{
+    width: 100%;
+    background-color: rgb(82, 20, 229);
+}
