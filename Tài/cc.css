@@ -1,0 +1,167 @@
+body {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+.box {
+    display: flex;
+}
+
+.box1, .box2, .box3, .box4 {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    margin: 0 20px;
+    overflow: hidden;
+}
+
+.box1 {
+    background-color: brown;
+}
+.box2 {
+    background-color: blue;
+}
+.box3 {
+    background-color: blueviolet;
+}
+.box4 {
+    background-color: chartreuse;
+}
+
+.top,
+.bottom {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: aliceblue;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* Box 1 */
+.box1 .top {
+    top: 0;
+    animation-name: box1Up;
+    animation-duration: 2s; /* Adjust the duration as needed */
+}
+
+.box1 .bottom {
+    bottom: 0;
+    animation-name: box1Down;
+    animation-duration: 2s; /* Adjust the duration as needed */
+}
+
+/* Box 2 */
+.box2 .top {
+    top: 0;
+    animation-name: box2Up;
+    animation-duration: 3s; /* Adjust the duration as needed */
+}
+
+.box2 .bottom {
+    bottom: 0;
+    animation-name: box2Down;
+    animation-duration: 3s; /* Adjust the duration as needed */
+}
+
+/* Box 3 */
+.box3 .top {
+    top: 0;
+    animation-name: box3Up;
+    animation-duration: 1.5s; /* Adjust the duration as needed */
+}
+
+.box3 .bottom {
+    bottom: 0;
+    animation-name: box3Down;
+    animation-duration: 1.5s; /* Adjust the duration as needed */
+}
+
+/* Box 4 */
+.box4 .top {
+    top: 0;
+    animation-name: box4Up;
+    animation-duration: 2.5s; /* Adjust the duration as needed */
+}
+
+.box4 .bottom {
+    bottom: 0;
+    animation-name: box4Down;
+    animation-duration: 2.5s; /* Adjust the duration as needed */
+}
+
+@keyframes box1Up {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes box1Down {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(100px);
+    }
+}
+
+@keyframes box2Up {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes box2Down {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(100px);
+    }
+}
+
+@keyframes box3Up {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes box3Down {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(100px);
+    }
+}
+
+@keyframes box4Up {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes box4Down {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(100px);
+    }
+}
